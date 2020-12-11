@@ -1,0 +1,127 @@
+/*
+  begin: product
+*/
+.wrapper_absolute {
+  position: relative;
+}
+.product {
+  width: 100%;
+  height: 776px;
+  border: 1px solid rgba(234, 234, 234, 1);
+  background: #F7F7F7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product__left,
+.product__right {
+  position: absolute;
+  width: 47px;
+  height: 47px;
+  background: rgba(42, 42, 42, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.product__right {
+  right: 0  ;
+}
+.product__left {
+  left: 0;
+}
+.product__left_svg,
+.product__right_svg {
+  fill: black;
+}
+.product__left:hover .product__left_svg,
+.product__right:hover .product__right_svg{
+  fill: #F16D7F;
+}
+.product__box {
+  display: flex;
+  justify-content: center;
+}
+/*
+  end: product
+*/
+/*
+  begin: description
+*/
+.description {
+  border: 1px solid #EAEAEA;
+  background: #FFFFFF;
+  height: 600px;
+  width: 100%;
+  margin-top: -64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 290px;
+  position: relative;
+  z-index: 5;
+}
+.description__heading {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #F16D7F;
+  text-transform: uppercase;
+}
+
+.description__line_top {
+  background: #EF5B70;
+  width: 63px;
+  height: 3px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.description__title {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4D4D4D;
+  text-transform: uppercase;
+}
+.description__text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #5E5E5E;
+  padding-top: 48px;
+  padding-bottom: 32px;
+}
+.description__price {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #EF5B70;
+}
+.description__line_bottom {
+  border: 1px solid #EAEAEA;
+  background-color: #EAEAEA;
+  width: 641px;
+  margin: 65px 0
+}
+.description__selection {
+  display: flex;
+  margin-bottom: 48px;
+}
+.sort__param_span {
+  cursor: pointer;
+}
+/*
+  end: description
+*/
+/*
+  begin: featured
+*/
+.featured {
+  padding-top: 129px;
+  padding-bottom: 129px;
+}
+/*
+  end: featured
+*/

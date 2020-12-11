@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style_main.css" />
-    <link rel="stylesheet" href="style_index.css" />
     <link rel="stylesheet" href="style_catalog.css" />
+    <link rel="stylesheet" href="style_product.css" />
     <title>GB project</title>
   </head>
   <body>
@@ -98,164 +98,206 @@
         </div>
       </nav>
     </header>
-    <section class="promo">
-      <div class="promo__left">
-        <img class="promo__img" src="./images/index/promo.jpg" alt="promo" />
+    <section class="title center">
+      <h2 class="title__text">NEW ARRIVALS</h2>
+      <nav class="title__nav_box">
+        <a class="title__nav_link" href="./index.html">HOME</a>
+        <a class="title__nav_link" href="#">MEN</a>
+        <a class="title__nav_link title__link_active" href="./catalog.html"
+          >NEW ARRIVALS</a
+        >
+      </nav>
+    </section>
+    <div class="wrapper_absolute">
+      <div class="product">
+        <div class="product__left">
+          <svg
+            class="product__left_svg"
+            width="13"
+            height="23"
+            viewBox="0 0 13 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.6998 3.7499L4.9498 11.4999L12.6998 19.2499L11.1498 22.3499L0.299805 11.4999L11.1498 0.649902L12.6998 3.7499Z"
+              fill=""
+            />
+          </svg>
+        </div>
+        <div class="product__box center">
+          <img src="./images/product/product_photo1.jpg" alt="продукт 1" />
+        </div>
+        <div class="product__right">
+          <svg
+            class="product__right_svg"
+            width="13"
+            height="23"
+            viewBox="0 0 13 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.299805 19.2499L8.0498 11.4999L0.299805 3.7499L1.8498 0.649902L12.6998 11.4999L1.8498 22.3499L0.299805 19.2499Z"
+              fill=""
+            />
+          </svg>
+        </div>
       </div>
-      <div class="promo__right">
-        <div class="promo__right_first"></div>
-        <div class="promo__heading">
-          <h1 class="promo__title">THE BRAND</h1>
-          <p class="promo__text">
-            OF LUXERIOUS <span class="promo__text_span">FASHION</span>
+      <section class="center">
+        <div class="description">
+          <h3 class="description__heading">WOMEN COLLECTION</h3>
+          <div class="description__line_top"></div>
+          <span class="description__title">MOSCHINO CHEAP AND CHIC</span>
+          <p class="description__text">
+            Compellingly actualize fully researched processes before proactive
+            outsourcing. Progressively syndicate collaborative architectures
+            before cutting-edge services. Completely visualize parallel core
+            competencies rather than exceptional portals.
           </p>
+          <span class="description__price">$561</span>
+          <div class="description__line_bottom"></div>
+          <div class="description__selection">
+            <details class="sort__open">
+              <summary class="sort__param_span">
+                CHOOSE COLOR
+                <svg
+                  class="sort__param_svg"
+                  width="11"
+                  height="6"
+                  viewBox="0 0 11 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.00214 5.00214C4.83521 5.00247 4.67343 4.94433 4.54488 4.83782L0.258102 1.2655C0.112196 1.14422 0.0204417 0.969958 0.00302325 0.781035C-0.0143952 0.592112 0.0439493 0.404007 0.165221 0.258101C0.286493 0.112196 0.460759 0.0204417 0.649682 0.00302327C0.838605 -0.0143952 1.02671 0.043949 1.17262 0.165221L5.00214 3.36602L8.83167 0.279536C8.90475 0.220188 8.98884 0.175869 9.0791 0.149125C9.16937 0.122382 9.26403 0.113741 9.35764 0.1237C9.45126 0.133659 9.54198 0.162021 9.6246 0.207156C9.70722 0.252292 9.7801 0.313311 9.83906 0.386705C9.90449 0.460167 9.95405 0.546351 9.98462 0.639855C10.0152 0.733359 10.0261 0.83217 10.0167 0.930097C10.0073 1.02802 9.97784 1.12296 9.93005 1.20895C9.88227 1.29494 9.81723 1.37013 9.73904 1.42982L5.45225 4.88068C5.32002 4.97036 5.16154 5.01312 5.00214 5.00214Z"
+                    fill="#6F6E6E"
+                  />
+                </svg>
+              </summary>
+              <div class="sort__check sort__trending">
+                <label
+                  ><input
+                    class="sort__check_input"
+                    type="checkbox"
+                    name="trending"
+                  />black</label
+                >
+                <label
+                  ><input
+                    class="sort__check_input"
+                    type="checkbox"
+                    name="trending"
+                  />white</label
+                >
+              </div>
+            </details>
+            <details class="sort__open">
+              <summary class="sort__param_span">
+                CHOOSE SIZE
+                <svg
+                  class="sort__param_svg"
+                  width="11"
+                  height="6"
+                  viewBox="0 0 11 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.00214 5.00214C4.83521 5.00247 4.67343 4.94433 4.54488 4.83782L0.258102 1.2655C0.112196 1.14422 0.0204417 0.969958 0.00302325 0.781035C-0.0143952 0.592112 0.0439493 0.404007 0.165221 0.258101C0.286493 0.112196 0.460759 0.0204417 0.649682 0.00302327C0.838605 -0.0143952 1.02671 0.043949 1.17262 0.165221L5.00214 3.36602L8.83167 0.279536C8.90475 0.220188 8.98884 0.175869 9.0791 0.149125C9.16937 0.122382 9.26403 0.113741 9.35764 0.1237C9.45126 0.133659 9.54198 0.162021 9.6246 0.207156C9.70722 0.252292 9.7801 0.313311 9.83906 0.386705C9.90449 0.460167 9.95405 0.546351 9.98462 0.639855C10.0152 0.733359 10.0261 0.83217 10.0167 0.930097C10.0073 1.02802 9.97784 1.12296 9.93005 1.20895C9.88227 1.29494 9.81723 1.37013 9.73904 1.42982L5.45225 4.88068C5.32002 4.97036 5.16154 5.01312 5.00214 5.00214Z"
+                    fill="#6F6E6E"
+                  />
+                </svg>
+              </summary>
+              <div class="sort__check sort__trending">
+                <label
+                  ><input
+                    class="sort__check_input"
+                    type="checkbox"
+                    name="trending"
+                  />XXL</label
+                >
+                <label
+                  ><input
+                    class="sort__check_input"
+                    type="checkbox"
+                    name="trending"
+                  />XL</label
+                >
+                <label
+                  ><input
+                    class="sort__check_input"
+                    type="checkbox"
+                    name="trending"
+                  />S</label
+                >
+                <label
+                  ><input
+                    class="sort__check_input"
+                    type="checkbox"
+                    name="trending"
+                  />L</label
+                >
+              </div>
+            </details>
+            <details class="sort__open">
+              <summary class="sort__param_span">
+                QUANTITY
+                <svg
+                  class="sort__param_svg"
+                  width="11"
+                  height="6"
+                  viewBox="0 0 11 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.00214 5.00214C4.83521 5.00247 4.67343 4.94433 4.54488 4.83782L0.258102 1.2655C0.112196 1.14422 0.0204417 0.969958 0.00302325 0.781035C-0.0143952 0.592112 0.0439493 0.404007 0.165221 0.258101C0.286493 0.112196 0.460759 0.0204417 0.649682 0.00302327C0.838605 -0.0143952 1.02671 0.043949 1.17262 0.165221L5.00214 3.36602L8.83167 0.279536C8.90475 0.220188 8.98884 0.175869 9.0791 0.149125C9.16937 0.122382 9.26403 0.113741 9.35764 0.1237C9.45126 0.133659 9.54198 0.162021 9.6246 0.207156C9.70722 0.252292 9.7801 0.313311 9.83906 0.386705C9.90449 0.460167 9.95405 0.546351 9.98462 0.639855C10.0152 0.733359 10.0261 0.83217 10.0167 0.930097C10.0073 1.02802 9.97784 1.12296 9.93005 1.20895C9.88227 1.29494 9.81723 1.37013 9.73904 1.42982L5.45225 4.88068C5.32002 4.97036 5.16154 5.01312 5.00214 5.00214Z"
+                    fill="#6F6E6E"
+                  />
+                </svg>
+              </summary>
+              <div class="sort__check sort__trending">
+                <label
+                  ><input
+                    class="sort__check_input"
+                    type="checkbox"
+                    name="trending"
+                  />QUANTITY</label
+                >
+                <label
+                  ><input
+                    class="sort__check_input"
+                    type="checkbox"
+                    name="trending"
+                  />QUANTITY</label
+                >
+                <label
+                  ><input
+                    class="sort__check_input"
+                    type="checkbox"
+                    name="trending"
+                  />QUANTITY</label
+                >
+                <label
+                  ><input
+                    class="sort__check_input"
+                    type="checkbox"
+                    name="trending"
+                  />QUANTITY</label
+                >
+              </div>
+            </details>
+          </div>
+          <a class="featured_button center" href="#">Add to Cart</a>
         </div>
-      </div>
-    </section>
-    <section class="catalog center">
-      <div class="catalog__item">
-        <img
-          class="catalog__imag"
-          src="./images/index/catalog1.jpg"
-          alt="каталог1"
-        />
-        <div class="catalog__content">
-          <a href="./catalog.html">
-            <p class="catalog_text">30% OFF</p>
-            <h3 class="catalog_heading">FOR WOMEN</h3>
-          </a>
-        </div>
-      </div>
-      <div class="catalog__item">
-        <img
-          class="catalog__imag"
-          src="./images/index/catalog2.jpg"
-          alt="каталог2"
-        />
-        <div class="catalog__content">
-          <a href="./catalog.html">
-            <p class="catalog_text">HOT DEAL</p>
-            <h3 class="catalog_heading">FOR MEN</h3>
-          </a>
-        </div>
-      </div>
-      <div class="catalog__item">
-        <img
-          class="catalog__imag"
-          src="./images/index/catalog3.jpg"
-          alt="каталог3"
-        />
-        <div class="catalog__content">
-          <a href="./catalog.html">
-            <p class="catalog_text">NEW ARRIVALS</p>
-            <h3 class="catalog_heading">FOR KIDS</h3>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section class="catalog__item_big center">
-      <img
-        class="catalog__big_img"
-        src="./images/index/catalogBig.jpg"
-        alt="каталог4"
-      />
-      <div class="catalog__content">
-        <a href="./catalog.html">
-          <p class="catalog_text">LUXIROUS & TRENDY</p>
-          <h3 class="catalog_heading">ACCESORIES</h3>
-        </a>
-      </div>
-    </section>
+      </section>
+    </div>
     <section class="featured center">
-      <h4 class="featured__heading">Fetured Items</h4>
-      <p class="featured__text">
-        Shop for items based on what we featured in this week
-      </p>
       <div class="featured__items center">
         <div class="featured__item">
           <div class="featured__item_img">
-            <a href="./cart.html" class="feature__hover">
-              <div class="feature__hover_text">
-                  <img
-                    class="feature__hover_cart"
-                    src="./images/all/cart.svg"
-                    alt="корзина"
-                  />
-                  <span class="feature__hover_addCart">Add to Cart</span>
-              </div>
-            </a>
-            <img src="./images/catalog/catalog1.jpg" alt="популярные товары " />
-          </div>
-          <div class="featured__content">
-            <h4 class="featured__content_title">
-              <a class="featured__content_title_a" href="#"
-                >ELLERY X M'O CAPSULE</a
-              >
-            </h4>
-            <p class="featured__content_text">
-              Known for her sculptural takes on traditional tailoring,
-              Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
-            </p>
-            <span class="featured__price">$52.00</span>
-          </div>
-        </div>
-        <div class="featured__item">
-          <div class="featured__item_img">
-            <a href="./cart.html" class="feature__hover">
-              <div class="feature__hover_text">
-                <img
-                  class="feature__hover_cart"
-                  src="./images/all/cart.svg"
-                  alt="корзина"
-                />
-                <span class="feature__hover_addCart">Add to Cart</span>
-              </div>
-            </a>
-            <img src="./images/catalog/catalog2.jpg" alt="популярные товары " />
-          </div>
-          <div class="featured__content">
-            <h4 class="featured__content_title">
-              <a class="featured__content_title_a" href="#"
-                >ELLERY X M'O CAPSULE</a
-              >
-            </h4>
-            <p class="featured__content_text">
-              Known for her sculptural takes on traditional tailoring,
-              Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
-            </p>
-            <span class="featured__price">$52.00</span>
-          </div>
-        </div>
-        <div class="featured__item">
-          <div class="featured__item_img">
-            <a href="./cart.html" class="feature__hover">
-              <div class="feature__hover_text">
-                <img
-                  class="feature__hover_cart"
-                  src="./images/all/cart.svg"
-                  alt="корзина"
-                />
-                <span class="feature__hover_addCart">Add to Cart</span>
-              </div>
-            </a>
-            <img src="./images/catalog/catalog3.jpg" alt="популярные товары " />
-          </div>
-          <div class="featured__content">
-            <h4 class="featured__content_title">
-              <a class="featured__content_title_a" href="#"
-                >ELLERY X M'O CAPSULE</a
-              >
-            </h4>
-            <p class="featured__content_text">
-              Known for her sculptural takes on traditional tailoring,
-              Australian arbiter of cool Kym Ellery teams up with Moda Operandi.
-            </p>
-            <span class="featured__price">$52.00</span>
-          </div>
-        </div>
-        <div class="featured__item">
-          <div class="featured__item_img">
-            <a href="./cart.html" class="feature__hover">
+            <a href="./product.html" class="feature__hover">
               <div class="feature__hover_text">
                 <img
                   class="feature__hover_cart"
@@ -282,7 +324,7 @@
         </div>
         <div class="featured__item">
           <div class="featured__item_img">
-            <a href="./cart.html" class="feature__hover">
+            <a href="./product.html" class="feature__hover">
               <div class="feature__hover_text">
                 <img
                   class="feature__hover_cart"
@@ -292,7 +334,7 @@
                 <span class="feature__hover_addCart">Add to Cart</span>
               </div>
             </a>
-            <img src="./images/catalog/catalog5.jpg" alt="популярные товары " />
+            <img src="./images/catalog/catalog3.jpg" alt="популярные товары " />
           </div>
           <div class="featured__content">
             <h4 class="featured__content_title">
@@ -309,7 +351,7 @@
         </div>
         <div class="featured__item">
           <div class="featured__item_img">
-            <a href="./cart.html" class="feature__hover">
+            <a href="./product.html" class="feature__hover">
               <div class="feature__hover_text">
                 <img
                   class="feature__hover_cart"
@@ -334,9 +376,6 @@
             <span class="featured__price">$52.00</span>
           </div>
         </div>
-        <a class="featured_button center" href="./catalog.html"
-          >Browse All Product</a
-        >
       </div>
     </section>
     <footer class="footer">
