@@ -31,6 +31,24 @@ summary::-webkit-details-marker {
   display: none;
 }
 
+.button {
+  border: 1px solid #FF6A6A;
+  font-size: 16px;
+  line-height: 19px;
+  color: #F26376;
+  background-color: #fff;
+  padding: 15px 39px;
+  margin: 0 auto;
+  outline: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #F16D7F;
+  border: 1px solid #FF6A6A;
+  color: #fff;
+}
+
 /* 
   begin: heading
 */
@@ -62,6 +80,7 @@ summary::-webkit-details-marker {
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
+
 .header__menu_box {
   width: 232px;
   height: 764px;
@@ -76,26 +95,31 @@ summary::-webkit-details-marker {
   display: flex;
   flex-direction: column;
 }
+
 .header__menu_svg {
   display: block;
   margin-left: auto;
   margin-bottom: 9px;
 }
+
 .header__menu_title {
   font-family: "LatoBold";
   font-weight: bold;
   padding-bottom: 24px;
   text-transform: uppercase;
 }
+
 .header__menu_type {
   color: #F16D7F;
   text-transform: uppercase;
 }
+
 .header__menu_link {
   display: inline-block;
   color: #6F6E6E;
   padding: 10px 25px;
 }
+
 .header__menu_link:hover {
   color: #F16D7F;
 }
@@ -246,6 +270,7 @@ summary::-webkit-details-marker {
   font-size: 14px;
   color: #FFFFFF;
   line-height: 50px;
+  cursor: pointer;
 }
 
 .footer__center_button:hover {
