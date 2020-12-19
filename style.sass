@@ -1,4 +1,5 @@
-@import _vars.sass
+@import vars
+@import mixins
 
 @font-face
   font-family: "Lato"
@@ -12,6 +13,27 @@
   margin: 0
   padding: 0
   box-sizing: border-box
+input[type='number']
+  -moz-appearance: textfield
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
+  -webkit-appearance: none
+
+summary::-webkit-details-marker
+  display: none
+
+summary:active,
+summary:hover,
+summary:focus
+  outline: 0
+  outline-offset: 0
+
+details
+  outline: 0
+  outline-offset: 0
+
+ul
+  list-style-type: none
 
 a
   text-decoration: none
@@ -19,35 +41,36 @@ a
 body
   font-family: "Lato"
 
-summary::-webkit-details-marker
-  display: none
+input:focus,
+button:focus
+  outline: none
+  outline-offset: 0
 
 .center
   padding-left: calc(50% - 570px)
   padding-right: calc(50% - 570px)
 
 .button
-  border: 1px solid #FF6A6A
+  border: 1px solid $colorSelect
   font-size: 16px
   line-height: 19px
-  color: #F26376
+  color: $colorSelect
   background-color: #fff
   padding: 15px 39px
   margin: 0 auto
-  outline: none
   cursor: pointer
 
   &:hover
-    background: $collorSelect
-    border: 1px solid #FF6A6A
+    background: $colorSelectHover
+    border: 1px solid $colorSelectHover
     color: #fff
 
 .header
-  background-color: #222222
+  background-color: $bgColorHeadingFooter
   height: 75px
-  display: flex
+  +centerFlex()
+  flex-direction: row
   justify-content: space-between
-  align-items: center
   position: relative
 
   &__search
@@ -69,21 +92,21 @@ summary::-webkit-details-marker
   &__menu_box
     width: 232px
     height: 764px
-    background: #FFFFFF
+    position: relative
+    display: flex
+    flex-direction: column
+    background: $bgColorDefault
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
-    padding-left: 34px
-    padding-top: 17px
-    padding-right: 17px
+    padding: 34px
     margin-left: auto
     font-size: 14px
     line-height: 17px
-    display: flex
-    flex-direction: column
 
   &__menu_svg
     display: block
-    margin-left: auto
-    margin-bottom: 9px
+    position: absolute
+    right: 16px
+    top: 16px
 
   &__menu_title
     font-family: "LatoBold"
@@ -92,37 +115,32 @@ summary::-webkit-details-marker
     text-transform: uppercase
 
   &__menu_type
-    color: $collorSelect
+    color: $colorSelect
     text-transform: uppercase
 
   &__menu_link
     display: inline-block
-    color: #6F6E6E
+    color: $colorText
     padding: 10px 25px
-
-  &__menu_link:hover
-    color: $collorSelect
+    &:hover
+      color: $colorSelect
 
 .footer
-  background-color: #222224
+  background-color: $bgColorHeadingFooter
   width: 100%
   height: 100%
 
   &__top
-    display: flex
-    justify-content: space-between
-    align-items: center
+    +centerFlex()
+    flex-direction: row
     flex-wrap: wrap
     width: 100%
     min-height: 341px
 
   &__top_item
     flex-basis: 360px
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    color: #FBFBFB
+    +centerFlex()
+    color: $colorTextFooter
     text-align: center
     padding: 15px
 
@@ -130,16 +148,16 @@ summary::-webkit-details-marker
     padding-right: 15px
 
   &__top_title
-    font-size: 19.96px
+    font-size: 20px
     line-height: 24px
     padding-top: 20px
     padding-bottom: 16px
 
   &__top_title_a
-    color: #FBFBFB
+    color: $colorTextFooter
 
   &__top_title_a:hover
-    color: $collorSelect
+    color: $colorSelect
 
   &__top_text
     font-weight: 300
@@ -147,54 +165,48 @@ summary::-webkit-details-marker
     line-height: 17px
 
   &__center
-    background: rgba(244, 244, 244, 0.7)
+    display: flex
+    width: 100%
+    height: 448px
     background-image: url(./images/all/bg_footer_center.jpg)
     background-repeat: no-repeat
     background-position: left bottom
     background-size: cover
-    width: 100%
-    height: 448px
-    display: flex
 
   &__center_left
     flex-grow: 1
     flex-basis: 50%
     height: 100%
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
+    +centerFlex()
     text-align: center
     padding: 0 10%
 
   &__center_left_text
     font-size: 20px
     line-height: 24px
-    color: #222224
+    color: $bgColorHeadingFooter
     padding-top: 32px
 
   &__center_right
     width: 50%
     height: 100%
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
+    +centerFlex()
 
   &__center_right_heading
     font-size: 24px
-    color: #222224
+    color: $bgColorHeadingFooter
     line-height: 167.2%
 
   &__center_right_text
     font-family: "Lato"
+    @extend .footer__center_right_heading
     font-size: 19px
-    color: #222224
-    line-height: 167.2%
     padding-bottom: 32px
 
   &__center_wrapper
     display: flex
+    line-height: 50px
+    font-size: 14px
 
   &__center_input
     width: 256px
@@ -202,15 +214,10 @@ summary::-webkit-details-marker
     padding: 7px 22px
     border-top-left-radius: 25px
     border-bottom-left-radius: 25px
-    font-size: 14px
-    line-height: 50px
-    color: #222224
+    color: $bgColorHeadingFooter
+    background: $bgColorInput
     opacity: 0.67
-    background: #E1E1E1
     border: none
-
-  &__center_input:focus
-    outline: none
 
   &__center_button
     display: inline-block
@@ -218,27 +225,25 @@ summary::-webkit-details-marker
     width: 100px
     height: 50px
     padding: 0 21px
-    background: $collorSelect
+    background: $colorSelect
     border-top-right-radius: 25px
     border-bottom-right-radius: 25px
-    font-size: 14px
-    color: #FFFFFF
-    line-height: 50px
+    color: $bgColorDefault
     cursor: pointer
 
   &__center_button:hover
-    background: #E05C6E
+    background: $colorSelectHover
 
   &__bottom
     height: 80px
-    display: flex
+    +centerFlex()
+    flex-direction: row
     justify-content: space-between
-    align-items: center
 
   &__copyright
     font-size: 16px
     line-height: 19px
-    color: #FBFBFB
+    color: $colorTextFooter
 
   &__bottom_right
     display: flex
@@ -246,24 +251,28 @@ summary::-webkit-details-marker
   &__bottom_icon
     width: 32px
     height: 32px
-    background: #FFFFFF
+    background: $bgColorDefault
 
   &__bottom_icon_a
     width: 100%
     height: 100%
-    display: flex
-    justify-content: center
-    align-items: center
+    +centerFlex()
 
   &__bottom_icon_svg
-    fill: black
+    fill: $bgColorHeadingFooter
 
   &__bottom_icon:not(:last-child)
     margin-right: 8px
 
   &__bottom_icon:hover
-    background: #E05C6E
-    color: #fff
+    background: $colorSelectHover
+    color: $bgColorDefault
 
   &__bottom_icon:hover .footer__bottom_icon_svg
-    fill: white
+    fill: $bgColorDefault
+
+@import index
+@import catalog
+@import product
+@import cart
+@import registration

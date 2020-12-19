@@ -12,15 +12,14 @@
 
   &__right
     width: 50%
-    background-color: #F1E4E6
+    background-color: $bgColorTop
     display: flex
     align-items: center
     padding-left: 95px
 
   &__heading
     max-width: 370px
-    color: #222222
-    font-style: normal
+    color: $colorHeading
     text-transform: uppercase
 
   &__title
@@ -34,13 +33,14 @@
     line-height: 24px
 
   &__text_span
-    color: #F16D7F
+    color: $colorSelect
 
-  &__right .promo__right_first
-    background-color: #F16D7F
-    width: 12px
-    height: 92px
-    margin-right: 16px
+  &__right
+    &_first
+      background-color: $colorSelect
+      width: 12px
+      height: 92px
+      margin-right: 16px
 
 .catalog
   display: flex
@@ -70,35 +70,49 @@
     height: 100%
     top: 0
     left: 0
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
+    +centerFlex()
     line-height: 19px
     text-transform: uppercase
     font-weight: bold
     text-align: center
 
   &_text
-    color: #fff
+    color: $colorDefault
     font-size: 11px
 
   &_heading
-    color: #F16D7F
+    color: $colorSelect
     font-family: "LatoBold"
     font-size: 17px
 
-.featured__heading
-  font-size: 30px
-  line-height: 36px
-  color: #222222
-  width: 100%
-  text-align: center
+.featured
 
-.featured__text
-  font-size: 14px
-  line-height: 17px
-  color: #9F9F9F
-  width: 100%
-  text-align: center
-  margin-bottom: 50px
+  &__index
+    padding-top: 95px
+    padding-bottom: 95px
+
+  &__heading
+    font-size: 30px
+    line-height: 36px
+    color: $colorHeading
+    width: 100%
+    text-align: center
+
+  &__text
+    font-size: 14px
+    line-height: 17px
+    color: $colorText
+    width: 100%
+    text-align: center
+    margin-bottom: 50px
+  &__button
+    border: 1px solid $colorSelectHover
+    font-size: 16px
+    line-height: 19px
+    color: $colorSelectHover
+    padding: 15px 39px
+    margin: 0 auto
+
+    &:hover
+      background: $colorSelect
+      color: #fff
