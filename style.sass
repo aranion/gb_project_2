@@ -9,24 +9,43 @@
   font-family: "LatoBold"
   src: url('./fonts/Lato-Black.ttf') format('truetype')
 
+@-webkit-keyframes rotate-hor-center
+  0%
+  -webkit-transform: rotateY(0)
+  transform: rotateY(0)
+
+  100%
+  -webkit-transform: rotateY(-360deg)
+  transform: rotateY(-360deg)
+@keyframes rotate-hor-center
+  0%
+    -webkit-transform: rotateY(0)
+    transform: rotateY(0)
+
+  100%
+    -webkit-transform: rotateY(-360deg)
+    transform: rotateY(-360deg)
+
 *
   margin: 0
   padding: 0
   box-sizing: border-box
-input[type='number']
-  -moz-appearance: textfield
 
-input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
-  -webkit-appearance: none
+input
+  &[type='number']
+    -moz-appearance: textfield
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button
+    -webkit-appearance: none
 
-summary::-webkit-details-marker
-  display: none
-
-summary:active,
-summary:hover,
-summary:focus
-  outline: 0
-  outline-offset: 0
+summary
+  &::-webkit-details-marker
+    display: none
+  &:active,
+  &:hover,
+  &:focus
+    outline: 0
+    outline-offset: 0
 
 details
   outline: 0
@@ -59,6 +78,7 @@ button:focus
   padding: 15px 39px
   margin: 0 auto
   cursor: pointer
+  transition: background .25s
 
   &:hover
     background: $colorSelectHover
@@ -229,6 +249,7 @@ button:focus
     border-top-right-radius: 25px
     border-bottom-right-radius: 25px
     color: $bgColorDefault
+    transition: background .25s
     cursor: pointer
 
   &__center_button:hover
@@ -252,6 +273,7 @@ button:focus
     width: 32px
     height: 32px
     background: $bgColorDefault
+    transition: background 0.5s ease-in-out
 
   &__bottom_icon_a
     width: 100%
@@ -267,6 +289,8 @@ button:focus
   &__bottom_icon:hover
     background: $colorSelectHover
     color: $bgColorDefault
+    -webkit-animation: rotate-hor-center 0.25s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
+    animation: rotate-hor-center 0.25s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
 
   &__bottom_icon:hover .footer__bottom_icon_svg
     fill: $bgColorDefault

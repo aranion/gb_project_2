@@ -37,6 +37,7 @@
   &__filter
     position: absolute
     padding-left: 16px
+    transition: all .25s ease-out
 
   &__items
     display: none
@@ -64,7 +65,8 @@
   &__items_title:hover
     color: $colorSelectHover
 
-  &__filter:hover, .sort__param:hover
+  &__filter:hover,
+  &__param:hover
     cursor: pointer
 
   &__param
@@ -76,10 +78,10 @@
     font-size: 14px
     line-height: 17px
 
-  &__filter:hover .sort__filter_name
+  &__filter:hover &__filter_name
     color: $colorSelectHover
 
-  &__filter:hover .sort__filter_svg
+  &__filter:hover &__filter_svg
     fill: $colorSelectHover
 
   &__filter_svg
@@ -95,8 +97,9 @@
     padding: 17px 16px
     z-index: 1
 
-  &__filter_active:hover .sort__items
+  &__filter_active:hover &__items
     display: block
+    opacity: 1
 
   &__ul
     padding-left: 16px
@@ -163,6 +166,7 @@
 
   &__item:hover &__hover
     visibility: visible
+    opacity: 1
 
   &__item_img
     position: relative
@@ -174,6 +178,8 @@
     background-color: rgba(58, 56, 56, 0.86)
     +centerFlexRow()
     visibility: hidden
+    opacity: 0
+    transition: all .25s ease-out
 
     &_text
       width: 140px
@@ -229,7 +235,8 @@
   +centerFlexRow()
   justify-content: space-between
 
-.pagination_left, .pagination_right
+.pagination_left,
+.pagination_right
   padding: 0 15px
 
 .pagination__svg
@@ -243,7 +250,8 @@
   & a:hover
     color: $colorSelectHover
 
-.pagination_left:hover .pagination__svg, .pagination_right:hover .pagination__svg
+.pagination_left:hover .pagination__svg,
+.pagination_right:hover .pagination__svg
   fill: $colorSelectHover
 
 .pagination_active
