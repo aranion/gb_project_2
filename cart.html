@@ -21,7 +21,7 @@
         </a>
       </div>
       <nav class="header__right">
-        <a href="#">
+        <a class="header__menu" href="#">
           <img id="menu" src="./images/all/menu.svg" alt="меню" />
         </a>
         <!-- ВРЕМЕННО -->
@@ -29,7 +29,6 @@
           document.querySelector("#menu").addEventListener("click", () => {
             const menu_box = document.querySelector(".header__menu_wrapper");
             const closeMenu = document.querySelector(".header__menu_svg");
-
             menu_box.style.display = "block";
 
             closeMenu.addEventListener("click", () => {
@@ -41,14 +40,10 @@
           });
         </script>
         <!-- ВРЕМЕННО -->
-        <a href="./registration.html">
-          <img
-            class="header__account"
-            src="./images/all/account.svg"
-            alt="аккаунт"
-          />
+        <a class="header__account" href="./registration.html">
+          <img src="./images/all/account.svg" alt="аккаунт" />
         </a>
-        <a href="./cart.html">
+        <a class="header__cart" href="./cart.html">
           <img src="./images/all/cart.svg" alt="корзина" />
         </a>
         <div class="header__menu_wrapper center">
@@ -97,9 +92,9 @@
       </nav>
     </header>
     <div class="title center">
-      <h2 class="title__text">SHOPPING CART</h2>
+      <h2 class="title__text title__text_mobile">SHOPPING CART</h2>
     </div>
-    <div class="cart center">
+    <div class="cart center2">
       <div class="cart__left">
         <div class="cart__item">
           <img
@@ -139,7 +134,7 @@
                 class="cart__item_quantity"
                 type="number"
                 name="quantity"
-                id="quantity"
+                id="quantity1"
                 min="1"
                 value="2"
                 required
@@ -184,7 +179,7 @@
                 class="cart__item_quantity"
                 type="number"
                 name="quantity"
-                id="quantity"
+                id="quantity2"
                 min="1"
                 value="2"
                 required
@@ -199,46 +194,50 @@
       </div>
       <form class="cart__right">
         <h4 class="cart__right_title">SHIPPING ADRESS</h4>
-        <input
-          class="cart__right_input"
-          type="text"
-          name="bangladesh"
-          id="bangladesh"
-          placeholder="Bangladesh"
-          required
-        />
-        <input
-          class="cart__right_input"
-          type="text"
-          name="state"
-          id="state"
-          placeholder="State"
-          required
-        />
-        <input
-          class="cart__right_input"
-          type="number"
-          name="postcode"
-          id="postcode"
-          placeholder="Postcode / Zip"
-          required
-        />
-        <button class="button cart__right_button" type="submit">
-          GET A QUOTE
-        </button>
-        <div class="cart__right_box">
-          <div class="cart__right_sub">
-            <span>SUB TOTAL</span
-            ><span class="cart__right_sub-price">$900</span>
+        <div class="cart__right_row">
+          <div class="cart__right_box1">
+            <input
+              class="cart__right_input"
+              type="text"
+              name="bangladesh"
+              id="bangladesh"
+              placeholder="Bangladesh"
+              required
+            />
+            <input
+              class="cart__right_input"
+              type="text"
+              name="state"
+              id="state"
+              placeholder="State"
+              required
+            />
+            <input
+              class="cart__right_input"
+              type="number"
+              name="postcode"
+              id="postcode"
+              placeholder="Postcode / Zip"
+              required
+            />
+            <button class="button cart__right_button" type="submit">
+              GET A QUOTE
+            </button>
           </div>
-          <div class="cart__right_grand">
-            <span>GRAND TOTAL</span
-            ><span class="cart__right_grand-price">$900</span>
+          <div class="cart__right_box2">
+            <div class="cart__right_sub">
+              <span>SUB TOTAL</span
+              ><span class="cart__right_sub-price">$900</span>
+            </div>
+            <div class="cart__right_grand">
+              <span>GRAND TOTAL</span
+              ><span class="cart__right_grand-price">$900</span>
+            </div>
+            <div class="cart__right_line"></div>
+            <button class="button cart__right_button2" type="submit">
+              PROCEED TO CHECKOUT
+            </button>
           </div>
-          <div class="cart__right_line"></div>
-          <button class="button cart__right_button2" type="submit">
-            PROCEED TO CHECKOUT
-          </button>
         </div>
       </form>
     </div>

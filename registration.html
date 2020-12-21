@@ -21,7 +21,7 @@
         </a>
       </div>
       <nav class="header__right">
-        <a href="#">
+        <a class="header__menu" href="#">
           <img id="menu" src="./images/all/menu.svg" alt="меню" />
         </a>
         <!-- ВРЕМЕННО -->
@@ -29,7 +29,6 @@
           document.querySelector("#menu").addEventListener("click", () => {
             const menu_box = document.querySelector(".header__menu_wrapper");
             const closeMenu = document.querySelector(".header__menu_svg");
-
             menu_box.style.display = "block";
 
             closeMenu.addEventListener("click", () => {
@@ -41,14 +40,10 @@
           });
         </script>
         <!-- ВРЕМЕННО -->
-        <a href="./registration.html">
-          <img
-            class="header__account"
-            src="./images/all/account.svg"
-            alt="аккаунт"
-          />
+        <a class="header__account" href="./registration.html">
+          <img src="./images/all/account.svg" alt="аккаунт" />
         </a>
-        <a href="./cart.html">
+        <a class="header__cart" href="./cart.html">
           <img src="./images/all/cart.svg" alt="корзина" />
         </a>
         <div class="header__menu_wrapper center">
@@ -97,9 +92,9 @@
       </nav>
     </header>
     <div class="title center">
-      <h2 class="title__text">REGISTRATION</h2>
+      <h2 class="title__text title__text_mobile">REGISTRATION</h2>
     </div>
-    <div class="registration center">
+    <div class="registration center2">
       <form action="#" class="registration__left">
         <span class="registration__left_title">Your Name</span>
         <input
@@ -119,41 +114,51 @@
           required
         />
         <div class="registration__left_group-radio">
-          <label class="registration__left_label">
+          <label class="registration__label">
             <input
               class="registration__left_radio"
               type="radio"
               name="radioBtm"
-              id="radioBtm"
+              id="radioBtm1"
               required
             />
             Male
           </label>
-          <label>
+          <label class="registration__label">
             <input
               class="registration__left_radio"
               type="radio"
               name="radioBtm"
-              id="radioBtm"
+              id="radioBtm2"
               required
             />
             Female
+          </label>
+          <label class="registration__left_other">
+            <input
+              class="registration__left_radio"
+              type="radio"
+              name="radioBtm"
+              id="radioBtm3"
+              required
+            />
+            Other
           </label>
         </div>
         <span>Login details</span>
         <input
           class="registration__left_input"
           type="email"
-          name="firstName"
-          id="firstName"
+          name="email"
+          id="email"
           placeholder="Email"
           required
         />
         <input
           class="registration__left_input"
           type="password"
-          name="lastName"
-          id="lastName"
+          name="password"
+          id="password"
           placeholder="Password"
           required
         />
@@ -205,7 +210,6 @@
         </ul>
       </section>
     </div>
-
     <footer class="footer">
       <div class="footer__center center">
         <figure class="footer__center_left">

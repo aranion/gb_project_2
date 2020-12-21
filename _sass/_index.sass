@@ -46,9 +46,10 @@
   display: flex
   justify-content: space-between
   margin-top: 64px
+  gap: 30px
 
-  &__item:not(:last-child)
-    margin-right: 30px
+  // &__item:not(:last-child)
+  //   margin-right: 30px
 
   &__item
     position: relative
@@ -79,11 +80,11 @@
     font-weight: bold
     text-align: center
 
-  &_text
+  &__text
     color: $colorDefault
     font-size: 11px
 
-  &_heading
+  &__heading
     color: $colorSelect
     font-family: "LatoBold"
     font-size: 17px
@@ -107,13 +108,16 @@
     width: 100%
     text-align: center
     margin-bottom: 50px
+  &__footer
+    text-align: center
+    padding-top: 49px
   &__button
     border: 1px solid $colorSelectHover
     font-size: 16px
     line-height: 19px
     color: $colorSelectHover
     padding: 15px 39px
-    margin: 0 auto
+    display: inline-block
 
     &:hover
       background: $colorSelect

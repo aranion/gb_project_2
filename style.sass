@@ -1,5 +1,5 @@
-@import vars
-@import mixins
+@import ./_sass/vars
+@import ./_sass/mixins
 
 @font-face
   font-family: "Lato"
@@ -68,6 +68,9 @@ button:focus
 .center
   padding-left: calc(50% - 570px)
   padding-right: calc(50% - 570px)
+
+.center2
+  @extend .center
 
 .button
   border: 1px solid $colorSelect
@@ -146,12 +149,12 @@ button:focus
       color: $colorSelect
 
 .footer
-  background-color: $bgColorHeadingFooter
   width: 100%
   height: 100%
 
   &__top
     +centerFlex()
+    background-color: $bgColorHeadingFooter
     flex-direction: row
     flex-wrap: wrap
     width: 100%
@@ -186,29 +189,32 @@ button:focus
 
   &__center
     display: flex
+    align-items: center
     width: 100%
-    height: 448px
+    min-height: 448px
+    flex-wrap: wrap
     background-image: url(./images/all/bg_footer_center.jpg)
     background-repeat: no-repeat
     background-position: left bottom
     background-size: cover
 
   &__center_left
+    flex-basis: 360px
     flex-grow: 1
-    flex-basis: 50%
     height: 100%
     +centerFlex()
     text-align: center
-    padding: 0 10%
 
   &__center_left_text
     font-size: 20px
     line-height: 24px
     color: $bgColorHeadingFooter
     padding-top: 32px
+    width: 360px
 
   &__center_right
-    width: 50%
+    flex-basis: 557px
+    flex-grow: 1
     height: 100%
     +centerFlex()
 
@@ -236,7 +242,6 @@ button:focus
     border-bottom-left-radius: 25px
     color: $bgColorHeadingFooter
     background: $bgColorInput
-    opacity: 0.67
     border: none
 
   &__center_button
@@ -256,6 +261,7 @@ button:focus
     background: $colorSelectHover
 
   &__bottom
+    background-color: $bgColorHeadingFooter
     height: 80px
     +centerFlex()
     flex-direction: row
@@ -295,8 +301,9 @@ button:focus
   &__bottom_icon:hover .footer__bottom_icon_svg
     fill: $bgColorDefault
 
-@import index
-@import catalog
-@import product
-@import cart
-@import registration
+@import ./_sass/index
+@import ./_sass/catalog
+@import ./_sass/product
+@import ./_sass/cart
+@import ./_sass/registration
+@import ./_sass/_media

@@ -118,9 +118,6 @@
   &__param_span:hover, .sort__link:hover
     color: $colorSelect
 
-  &__param_span:not(:last-child)
-    margin-right: 28px
-
   &__param_svg
     margin-left: 10px
     margin-top: auto
@@ -128,6 +125,9 @@
 
   &__open
     position: relative
+
+  &__open:not(:last-child)
+    margin-right: 28px
 
   &__check
     position: absolute
@@ -156,13 +156,13 @@
   &__items
     width: 100%
     display: flex
-    justify-content: space-between
+    justify-content: center
     flex-wrap: wrap
+    gap: 30px
 
   &__item
     flex-basis: 360px
     background-color: #F8F8F8
-    margin-bottom: 30px
 
   &__item:hover &__hover
     visibility: visible
@@ -230,7 +230,7 @@
   width: 283px
   height: 43px
   margin: 0 auto
-  margin-top: 18px
+  margin-top: 48.5px
   border: 1px solid $colorLine
   +centerFlexRow()
   justify-content: space-between
@@ -254,6 +254,12 @@
 .pagination_right:hover .pagination__svg
   fill: $colorSelectHover
 
-.pagination_active
-  font-weight: 500
-  color: $colorSelectHover
+.pagination
+  &__link
+    color: $colorText
+  &_active
+    font-weight: 500
+    color: $colorSelectHover
+  &__more
+    margin-left: -20px
+    margin-right: -20px

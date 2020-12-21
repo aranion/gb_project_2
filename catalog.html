@@ -21,7 +21,7 @@
         </a>
       </div>
       <nav class="header__right">
-        <a href="#">
+        <a class="header__menu" href="#">
           <img id="menu" src="./images/all/menu.svg" alt="меню" />
         </a>
         <!-- ВРЕМЕННО -->
@@ -29,7 +29,6 @@
           document.querySelector("#menu").addEventListener("click", () => {
             const menu_box = document.querySelector(".header__menu_wrapper");
             const closeMenu = document.querySelector(".header__menu_svg");
-
             menu_box.style.display = "block";
 
             closeMenu.addEventListener("click", () => {
@@ -41,14 +40,10 @@
           });
         </script>
         <!-- ВРЕМЕННО -->
-        <a href="./registration.html">
-          <img
-            class="header__account"
-            src="./images/all/account.svg"
-            alt="аккаунт"
-          />
+        <a class="header__account" href="./registration.html">
+          <img src="./images/all/account.svg" alt="аккаунт" />
         </a>
-        <a href="./cart.html">
+        <a class="header__cart" href="./cart.html">
           <img src="./images/all/cart.svg" alt="корзина" />
         </a>
         <div class="header__menu_wrapper center">
@@ -96,7 +91,7 @@
         </div>
       </nav>
     </header>
-    <section class="title center">
+    <section class="title center2">
       <h2 class="title__text">NEW ARRIVALS</h2>
       <nav class="title__nav_box">
         <a class="title__nav_link" href="./index.html">HOME</a>
@@ -106,10 +101,10 @@
         >
       </nav>
     </section>
-    <div class="sort center">
+    <div class="sort center2">
       <div class="sort__filter sort__filter_active">
-        <span class="sort__filter_name"
-          >FILTER
+        <div class="sort__filter_name">
+          <span class="sort__title">FILTER</span>
           <svg
             class="sort__filter_svg"
             width="15"
@@ -123,11 +118,11 @@
               fill=""
             />
           </svg>
-        </span>
+        </div>
         <div class="sort__items">
           <details open autofocus>
             <summary class="sort__items_summary sort__items_summary_active">
-              <div class="sort__items_leftBG"></div>
+              <span class="sort__items_leftBG"></span>
               <span class="sort__items_title"> CATEGORY </span>
             </summary>
             <ul class="sort__ul">
@@ -156,7 +151,7 @@
           </details>
           <details>
             <summary class="sort__items_summary">
-              <div class="sort__items_leftBG"></div>
+              <span class="sort__items_leftBG"></span>
               <span class="sort__items_title"> BRAND </span>
             </summary>
             <ul class="sort__ul">
@@ -170,7 +165,7 @@
           </details>
           <details>
             <summary class="sort__items_summary">
-              <div class="sort__items_leftBG"></div>
+              <span class="sort__items_leftBG"></span>
               <span class="sort__items_title"> DESIGNER </span>
             </summary>
             <ul class="sort__ul">
@@ -203,34 +198,39 @@
             </svg>
           </summary>
           <div class="sort__check sort__trending">
-            <label
-              ><input
+            <label>
+              <input
                 class="sort__check_input"
                 type="checkbox"
                 name="trending"
-              />trending1</label
-            >
-            <label
-              ><input
+              />
+              trending1
+            </label>
+
+            <label>
+              <input
                 class="sort__check_input"
                 type="checkbox"
                 name="trending"
-              />trending2</label
-            >
-            <label
-              ><input
+              />
+              trending2
+            </label>
+            <label>
+              <input
                 class="sort__check_input"
                 type="checkbox"
                 name="trending"
-              />trending3</label
-            >
-            <label
-              ><input
+              />
+              trending3
+            </label>
+            <label>
+              <input
                 class="sort__check_input"
                 type="checkbox"
                 name="trending"
-              />trending4</label
-            >
+              />
+              trending4
+            </label>
           </div>
         </details>
         <details class="sort__open">
@@ -251,34 +251,22 @@
             </svg>
           </summary>
           <div class="sort__check sort__size">
-            <label
-              ><input
-                class="sort__check_input"
-                type="checkbox"
-                name="size"
-              />XS</label
-            >
-            <label
-              ><input
-                class="sort__check_input"
-                type="checkbox"
-                name="size"
-              />S</label
-            >
-            <label
-              ><input
-                class="sort__check_input"
-                type="checkbox"
-                name="size"
-              />M</label
-            >
-            <label
-              ><input
-                class="sort__check_input"
-                type="checkbox"
-                name="size"
-              />L</label
-            >
+            <label>
+              <input class="sort__check_input" type="checkbox" name="size" />
+              XS
+            </label>
+            <label>
+              <input class="sort__check_input" type="checkbox" name="size" />
+              S
+            </label>
+            <label>
+              <input class="sort__check_input" type="checkbox" name="size" />
+              M
+            </label>
+            <label>
+              <input class="sort__check_input" type="checkbox" name="size" />
+              L
+            </label>
           </div>
         </details>
         <details class="sort__open">
@@ -331,8 +319,8 @@
         </details>
       </div>
     </div>
-    <section class="featured featured__catalog center">
-      <div class="featured__items center">
+    <section class="featured featured__catalog center2">
+      <div class="featured__items">
         <div class="featured__item">
           <div class="featured__item_img">
             <a href="./cart.html" class="featured__hover">
@@ -390,7 +378,7 @@
             <span class="featured__price">$52.00</span>
           </div>
         </div>
-        <div class="featured__item">
+        <div class="featured__item featured__item_mobile">
           <div class="featured__item_img">
             <a href="./cart.html" class="featured__hover">
               <div class="featured__hover_text">
@@ -603,14 +591,14 @@
           </svg>
         </a>
         <div class="pagination_number">
-          <a class="pagination_active" href="#">1</a>
-          <a href="#">2</a>
-          <a href="#">3</a>
-          <a href="#">4</a>
-          <a href="#">5</a>
-          <a href="#">6</a>
-          <a href="#">...</a>
-          <a href="#">20</a>
+          <a class="pagination__link pagination_active" href="#">1</a>
+          <a class="pagination__link" href="#">2</a>
+          <a class="pagination__link" href="#">3</a>
+          <a class="pagination__link" href="#">4</a>
+          <a class="pagination__link" href="#">5</a>
+          <a class="pagination__link" href="#">6</a>
+          <a class="pagination__link pagination__more" href="#">.....</a>
+          <a class="pagination__link" href="#">20</a>
         </div>
         <a class="pagination_right" href="#">
           <svg
