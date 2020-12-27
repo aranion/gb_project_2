@@ -21,32 +21,12 @@
         </a>
       </div>
       <nav class="header__right">
-        <a class="header__menu" href="#">
+        <input type="checkbox" name="switcher" id="switcher" />
+        <!-- <a class="header__menu" href="#"> -->
+        <label for="switcher">
           <img id="menu" src="./images/all/menu.svg" alt="меню" />
-        </a>
-        <!-- ВРЕМЕННО -->
-        <script>
-          document.querySelector("#menu").addEventListener("click", () => {
-            const menu_box = document.querySelector(".header__menu_wrapper");
-            const closeMenu = document.querySelector(".header__menu_svg");
-            menu_box.style.display = "block";
-
-            closeMenu.addEventListener("click", () => {
-              menu_box.style.display = "none";
-            });
-            menu_box.addEventListener("click", () => {
-              menu_box.style.display = "none";
-            });
-          });
-        </script>
-        <!-- ВРЕМЕННО -->
-        <a class="header__account" href="./registration.html">
-          <img src="./images/all/account.svg" alt="аккаунт" />
-        </a>
-        <a class="header__cart" href="./cart.html">
-          <img src="./images/all/cart.svg" alt="корзина" />
-        </a>
-        <div class="header__menu_wrapper center">
+        </label>
+        <div class="header__menu_wrapper">
           <div class="header__menu_box">
             <a class="header__menu_svg" href="#">
               <svg
@@ -62,33 +42,97 @@
                 />
               </svg>
             </a>
-            <h4 class="header__menu_title">MENU</h4>
-            <a href="./catalog.html">
-              <span class="header__menu_type">MAN</span>
-            </a>
-            <a class="header__menu_link" href="#">Accessories</a>
-            <a class="header__menu_link" href="#">Bags</a>
-            <a class="header__menu_link" href="#">Denim</a>
-            <a class="header__menu_link" href="#">T-Shirts</a>
-            <a href="./catalog.html">
-              <span class="header__menu_type">WOMAN</span>
-            </a>
-            <a class="header__menu_link" href="#">Accessories</a>
-            <a class="header__menu_link" href="#">Jackets & Coats</a>
-            <a class="header__menu_link" href="#">Polos </a>
-            <a class="header__menu_link" href="#">T-Shirts</a>
-            <a class="header__menu_link" href="#">Shirts</a>
-            <a href="./catalog.html">
-              <span class="header__menu_type">KIDS</span>
-            </a>
-            <a class="header__menu_link" href="#">Accessories</a>
-            <a class="header__menu_link" href="#">Jackets & Coats</a>
-            <a class="header__menu_link" href="#">Polos</a>
-            <a class="header__menu_link" href="#">T-Shirts</a>
-            <a class="header__menu_link" href="#">Shirts</a>
-            <a class="header__menu_link" href="#">Bags</a>
+            <span class="header__menu_title">MENU</span>
+            <a class="header__menu_type" href="./catalog.html">MAN </a>
+            <ul>
+              <li>
+                <a class="header__menu_link" href="./product.html"
+                  >Accessories</a
+                >
+              </li>
+              <li>
+                <a class="header__menu_link" href="./product.html">Bags</a>
+              </li>
+              <li>
+                <a class="header__menu_link" href="./product.html">Denim</a>
+              </li>
+              <li>
+                <a class="header__menu_link" href="./product.html">T-Shirts</a>
+              </li>
+            </ul>
+            <a class="header__menu_type" href="./catalog.html">WOMAN </a>
+            <ul>
+              <li>
+                <a class="header__menu_link" href="./product.html">
+                  Accessories
+                </a>
+              </li>
+              <li>
+                <a class="header__menu_link" href="./product.html">
+                  Jackets & Coats
+                </a>
+              </li>
+              <li>
+                <a class="header__menu_link" href="./product.html">Polos </a>
+              </li>
+              <li>
+                <a class="header__menu_link" href="./product.html">T-Shirts</a>
+              </li>
+              <li>
+                <a class="header__menu_link" href="./product.html">Shirts</a>
+              </li>
+            </ul>
+
+            <a class="header__menu_type" href="./catalog.html">KIDS </a>
+            <ul>
+              <li>
+                <a class="header__menu_link" href="./product.html"
+                  >Accessories</a
+                >
+              </li>
+              <li>
+                <a class="header__menu_link" href="./product.html"
+                  >Jackets & Coats</a
+                >
+              </li>
+              <li>
+                <a class="header__menu_link" href="./product.html">Polos</a>
+              </li>
+              <li>
+                <a class="header__menu_link" href="./product.html">T-Shirts</a>
+              </li>
+              <li>
+                <a class="header__menu_link" href="./product.html">Shirts</a>
+              </li>
+              <li>
+                <a class="header__menu_link" href="./product.html">Bags</a>
+              </li>
+            </ul>
           </div>
         </div>
+        <!-- </a> -->
+        <!-- ВРЕМЕННО -->
+        <!-- <script>
+          document.querySelector("#menu").addEventListener("click", () => {
+            const menu_box = document.querySelector(".header__menu_wrapper");
+            const closeMenu = document.querySelector(".header__menu_svg");
+            menu_box.style.display = "block";
+
+            closeMenu.addEventListener("click", () => {
+              menu_box.style.display = "none";
+            });
+            menu_box.addEventListener("click", () => {
+              menu_box.style.display = "none";
+            });
+          });
+        </script> -->
+        <!-- ВРЕМЕННО -->
+        <a class="header__account" href="./registration.html">
+          <img src="./images/all/account.svg" alt="аккаунт" />
+        </a>
+        <a class="header__cart" href="./cart.html">
+          <img src="./images/all/cart.svg" alt="корзина" />
+        </a>
       </nav>
     </header>
     <div class="title center">

@@ -95,27 +95,35 @@ button:focus
   flex-direction: row
   justify-content: space-between
   position: relative
-
   &__search
     margin-left: 41px
+  &__right
+    display: flex
+    align-items: center
+  &__box
+    display: block
+    &_nav
+      display: none
 
   &__account
     margin-left: 34px
     margin-right: 34px
 
   &__menu_wrapper
-    display: none
-    position: absolute
+    // display: none
     width: 100%
-    left: 0
-    top: 75px
     background: rgba(0, 0, 0, 0.5)
-    z-index: 1
+    position: absolute
+    z-index: 10
+    right: 0
+    top: 75px
+    visibility: hidden
+    opacity: 0
+    transition: opacity .4s
 
   &__menu_box
     width: 232px
-    height: 764px
-    position: relative
+    min-height: 764px
     display: flex
     flex-direction: column
     background: $bgColorDefault
@@ -124,6 +132,7 @@ button:focus
     margin-left: auto
     font-size: 14px
     line-height: 17px
+    position: relative
 
   &__menu_svg
     display: block
@@ -147,6 +156,14 @@ button:focus
     padding: 10px 25px
     &:hover
       color: $colorSelect
+
+#switcher
+  position: absolute
+  left: -999999px
+  &:checked ~ .header__menu_wrapper
+    // top: 74px
+    visibility: visible
+    opacity: 1
 
 .footer
   width: 100%
