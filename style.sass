@@ -65,6 +65,17 @@ button:focus
   outline: none
   outline-offset: 0
 
+.wrapper
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+.content
+  flex: 1 0 auto
+
+.footer
+  flex: 0 0 auto
+
 .center
   padding-left: calc(50% - 570px)
   padding-right: calc(50% - 570px)
@@ -164,6 +175,8 @@ button:focus
     // top: 74px
     visibility: visible
     opacity: 1
+.switcher__label
+  cursor: pointer
 
 .footer
   width: 100%
@@ -227,7 +240,7 @@ button:focus
     line-height: 24px
     color: $bgColorHeadingFooter
     padding-top: 32px
-    width: 360px
+    max-width: 360px
 
   &__center_right
     flex-basis: 557px
